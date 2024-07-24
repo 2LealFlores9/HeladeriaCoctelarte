@@ -1,7 +1,11 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'menu_para_d_iabeticos_model.dart';
 export 'menu_para_d_iabeticos_model.dart';
 
@@ -39,15 +43,15 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFF1F5F8),
+        backgroundColor: Color(0xFFF1F5F8),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFF1F5F8),
+          backgroundColor: Color(0xFFF1F5F8),
           automaticallyImplyLeading: false,
           title: Text(
             'Menú para Diabeticos',
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
-                  color: const Color(0xFF0F1113),
+                  color: Color(0xFF0F1113),
                   fontSize: 28.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
@@ -55,13 +59,13 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 44.0,
-                icon: const Icon(
+                icon: Icon(
                   Icons.shopping_cart_outlined,
                   color: Color(0xFF57636C),
                   size: 24.0,
@@ -80,7 +84,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -88,7 +92,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                       'Menu de helados diabeticos con alchol',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
-                            color: const Color(0xFF57636C),
+                            color: Color(0xFF57636C),
                             fontSize: 14.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
@@ -98,7 +102,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                 child: ListView(
                   padding: EdgeInsets.zero,
                   primary: false,
@@ -107,7 +111,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -120,7 +124,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: const [
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 3.0,
                                 color: Color(0x411D2429),
@@ -133,12 +137,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 1.0, 1.0, 1.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(6.0),
@@ -152,7 +156,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 4.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -167,7 +171,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                               .headlineSmall
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF0F1113),
+                                                color: Color(0xFF0F1113),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
@@ -183,7 +187,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Icon(
@@ -193,7 +197,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 4.0, 8.0),
                                       child: Text(
                                         '₡1500',
@@ -202,7 +206,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: const Color(0xFF0F1113),
+                                              color: Color(0xFF0F1113),
                                               fontSize: 14.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
@@ -219,12 +223,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x411D2429),
@@ -237,12 +241,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(6.0),
@@ -256,7 +260,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 8.0, 4.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -270,7 +274,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                             .headlineSmall
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFF0F1113),
+                                              color: Color(0xFF0F1113),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
@@ -286,7 +290,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Icon(
@@ -296,7 +300,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 4.0, 8.0),
                                     child: Text(
                                       '₡1500',
@@ -305,7 +309,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: const Color(0xFF0F1113),
+                                            color: Color(0xFF0F1113),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -321,12 +325,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x411D2429),
@@ -339,12 +343,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(6.0),
@@ -358,7 +362,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 8.0, 4.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -372,7 +376,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                             .headlineSmall
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFF0F1113),
+                                              color: Color(0xFF0F1113),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
@@ -388,7 +392,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Icon(
@@ -398,7 +402,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 4.0, 8.0),
                                     child: Text(
                                       '₡1500',
@@ -407,7 +411,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: const Color(0xFF0F1113),
+                                            color: Color(0xFF0F1113),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -423,12 +427,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x411D2429),
@@ -441,12 +445,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(6.0),
@@ -460,7 +464,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 8.0, 4.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -474,7 +478,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                             .headlineSmall
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFF0F1113),
+                                              color: Color(0xFF0F1113),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
@@ -490,7 +494,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Icon(
@@ -500,7 +504,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 4.0, 8.0),
                                     child: Text(
                                       '₡1500',
@@ -509,7 +513,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: const Color(0xFF0F1113),
+                                            color: Color(0xFF0F1113),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -525,12 +529,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x411D2429),
@@ -543,12 +547,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(6.0),
@@ -562,7 +566,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 8.0, 4.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -576,7 +580,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                             .headlineSmall
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFF0F1113),
+                                              color: Color(0xFF0F1113),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
@@ -592,7 +596,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Icon(
@@ -602,7 +606,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 4.0, 8.0),
                                     child: Text(
                                       '₡1500',
@@ -611,7 +615,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: const Color(0xFF0F1113),
+                                            color: Color(0xFF0F1113),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -627,12 +631,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x411D2429),
@@ -645,12 +649,12 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(6.0),
@@ -664,7 +668,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 8.0, 4.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -678,7 +682,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                             .headlineSmall
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFF0F1113),
+                                              color: Color(0xFF0F1113),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
@@ -694,7 +698,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Icon(
@@ -704,7 +708,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 4.0, 8.0),
                                     child: Text(
                                       '₡1500',
@@ -713,7 +717,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: const Color(0xFF0F1113),
+                                            color: Color(0xFF0F1113),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,

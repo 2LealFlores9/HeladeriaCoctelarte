@@ -2,7 +2,10 @@ import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'buscar_heladospor_categoria_model.dart';
 export 'buscar_heladospor_categoria_model.dart';
 
@@ -60,7 +63,7 @@ class _BuscarHeladosporCategoriaWidgetState
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_rounded,
               color: Color(0xFF14181B),
               size: 30.0,
@@ -69,7 +72,7 @@ class _BuscarHeladosporCategoriaWidgetState
               context.pushNamed(
                 'MenuPrincipal',
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.leftToRight,
                     duration: Duration(milliseconds: 220),
@@ -82,13 +85,13 @@ class _BuscarHeladosporCategoriaWidgetState
             'Categorias',
             style: FlutterFlowTheme.of(context).titleLarge.override(
                   fontFamily: 'Outfit',
-                  color: const Color(0xFF14181B),
+                  color: Color(0xFF14181B),
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -101,7 +104,7 @@ class _BuscarHeladosporCategoriaWidgetState
                 Expanded(
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 8.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 8.0, 0.0),
                     child: TextFormField(
                       controller: _model.searchBarTextController,
                       focusNode: _model.searchBarFocusNode,
@@ -112,7 +115,7 @@ class _BuscarHeladosporCategoriaWidgetState
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF57636C),
+                                  color: Color(0xFF57636C),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
@@ -120,44 +123,44 @@ class _BuscarHeladosporCategoriaWidgetState
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF57636C),
+                                  color: Color(0xFF57636C),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
                                 ),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFFE0E3E7),
                             width: 2.0,
                           ),
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFF4B39EF),
                             width: 2.0,
                           ),
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         errorBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFFFF5963),
                             width: 2.0,
                           ),
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         focusedErrorBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFFFF5963),
                             width: 2.0,
                           ),
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         filled: true,
-                        fillColor: const Color(0xFFF1F4F8),
-                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                        fillColor: Color(0xFFF1F4F8),
+                        contentPadding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 20.0, 24.0),
-                        prefixIcon: const Icon(
+                        prefixIcon: Icon(
                           Icons.search,
                           color: Color(0xFF57636C),
                           size: 16.0,
@@ -165,7 +168,7 @@ class _BuscarHeladosporCategoriaWidgetState
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
-                            color: const Color(0xFF14181B),
+                            color: Color(0xFF14181B),
                             fontSize: 14.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.normal,
@@ -176,13 +179,13 @@ class _BuscarHeladosporCategoriaWidgetState
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 12.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 12.0, 0.0),
                   child: FlutterFlowIconButton(
                     borderColor: Colors.transparent,
                     borderRadius: 30.0,
                     borderWidth: 1.0,
                     buttonSize: 50.0,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.search_sharp,
                       color: Color(0xFF14181B),
                       size: 30.0,
@@ -198,7 +201,7 @@ class _BuscarHeladosporCategoriaWidgetState
               child: Column(
                 children: [
                   Align(
-                    alignment: const Alignment(-1.0, 0),
+                    alignment: Alignment(-1.0, 0),
                     child: FlutterFlowButtonTabBar(
                       useToggleButtonStyle: false,
                       isScrollable: true,
@@ -210,21 +213,21 @@ class _BuscarHeladosporCategoriaWidgetState
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.normal,
                               ),
-                      unselectedLabelStyle: const TextStyle(),
-                      labelColor: const Color(0xFF4B39EF),
-                      unselectedLabelColor: const Color(0xFF57636C),
-                      backgroundColor: const Color(0x4C4B39EF),
-                      borderColor: const Color(0xFF4B39EF),
+                      unselectedLabelStyle: TextStyle(),
+                      labelColor: Color(0xFF4B39EF),
+                      unselectedLabelColor: Color(0xFF57636C),
+                      backgroundColor: Color(0x4C4B39EF),
+                      borderColor: Color(0xFF4B39EF),
                       borderWidth: 2.0,
                       borderRadius: 12.0,
                       elevation: 0.0,
                       labelPadding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       buttonMargin:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 16.0, 0.0),
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      tabs: const [
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                      tabs: [
                         Tab(
                           text: 'Chocolate',
                         ),
@@ -251,7 +254,7 @@ class _BuscarHeladosporCategoriaWidgetState
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 0.0, 0.0),
                                 child: Text(
                                   'Categories',
@@ -259,7 +262,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF14181B),
+                                        color: Color(0xFF14181B),
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
@@ -267,7 +270,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -280,11 +283,11 @@ class _BuscarHeladosporCategoriaWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFF1F4F8),
+                                      color: Color(0xFFF1F4F8),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           8.0, 8.0, 12.0, 8.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -303,7 +306,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Limited Edition',
@@ -314,7 +317,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF14181B),
+                                                            Color(0xFF14181B),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -329,16 +332,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -357,7 +360,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Shakes',
@@ -366,7 +369,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -379,16 +382,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -407,7 +410,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Paleta',
@@ -416,7 +419,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -429,16 +432,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -457,7 +460,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Sundae',
@@ -466,7 +469,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -479,16 +482,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -507,7 +510,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Happy Sundae',
@@ -516,7 +519,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -529,16 +532,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -557,7 +560,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Copa de Helados',
@@ -566,7 +569,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -579,16 +582,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 44.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -607,7 +610,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Soft',
@@ -616,7 +619,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -637,7 +640,7 @@ class _BuscarHeladosporCategoriaWidgetState
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 0.0, 0.0),
                                 child: Text(
                                   'Categories',
@@ -645,7 +648,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF14181B),
+                                        color: Color(0xFF14181B),
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
@@ -653,7 +656,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -666,11 +669,11 @@ class _BuscarHeladosporCategoriaWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFF1F4F8),
+                                      color: Color(0xFFF1F4F8),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           8.0, 8.0, 12.0, 8.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -689,7 +692,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Helado Soft',
@@ -700,7 +703,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF14181B),
+                                                            Color(0xFF14181B),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -715,16 +718,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -743,7 +746,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Doble Cono',
@@ -752,7 +755,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -765,16 +768,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -793,7 +796,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Gelato',
@@ -802,7 +805,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -815,16 +818,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -843,7 +846,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Cono con Chocolate',
@@ -852,7 +855,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -865,23 +868,23 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 44.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                 ),
@@ -895,7 +898,7 @@ class _BuscarHeladosporCategoriaWidgetState
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 0.0, 0.0),
                                 child: Text(
                                   'Categories',
@@ -903,7 +906,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF14181B),
+                                        color: Color(0xFF14181B),
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
@@ -911,16 +914,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -939,7 +942,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Gelato',
@@ -948,7 +951,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -961,16 +964,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -989,7 +992,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Copa de Helados',
@@ -998,7 +1001,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -1011,16 +1014,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1039,7 +1042,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Milk Shake',
@@ -1048,7 +1051,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -1061,16 +1064,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1089,7 +1092,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Shake',
@@ -1098,7 +1101,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -1111,16 +1114,16 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 12.0, 8.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1139,7 +1142,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Batido',
@@ -1148,7 +1151,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -1161,7 +1164,7 @@ class _BuscarHeladosporCategoriaWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -1174,19 +1177,19 @@ class _BuscarHeladosporCategoriaWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFF1F4F8),
+                                      color: Color(0xFFF1F4F8),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 8.0, 16.0, 44.0),
                                 child: Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFF1F4F8),
+                                    color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                 ),

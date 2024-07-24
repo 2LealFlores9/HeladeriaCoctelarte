@@ -1,13 +1,20 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -81,47 +88,47 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => const LoginWidget(),
+          builder: (context, params) => LoginWidget(),
         ),
         FFRoute(
           name: 'MenuDeHelados',
           path: '/menuDeHelados',
-          builder: (context, params) => const MenuDeHeladosWidget(),
+          builder: (context, params) => MenuDeHeladosWidget(),
         ),
         FFRoute(
           name: 'InformacionNutricional',
           path: '/informacionNutricional',
-          builder: (context, params) => const InformacionNutricionalWidget(),
+          builder: (context, params) => InformacionNutricionalWidget(),
         ),
         FFRoute(
           name: 'MenuParaDIabeticos',
           path: '/menuParaDIabeticos',
-          builder: (context, params) => const MenuParaDIabeticosWidget(),
+          builder: (context, params) => MenuParaDIabeticosWidget(),
         ),
         FFRoute(
           name: 'BuscarHeladosporCategoria',
           path: '/buscarHeladosporCategoria',
-          builder: (context, params) => const BuscarHeladosporCategoriaWidget(),
+          builder: (context, params) => BuscarHeladosporCategoriaWidget(),
         ),
         FFRoute(
           name: 'InformacionNutricionalCopy',
           path: '/informacionNutricionalCopy',
-          builder: (context, params) => const InformacionNutricionalCopyWidget(),
+          builder: (context, params) => InformacionNutricionalCopyWidget(),
         ),
         FFRoute(
           name: 'Perfil',
           path: '/perfil',
-          builder: (context, params) => const PerfilWidget(),
+          builder: (context, params) => PerfilWidget(),
         ),
         FFRoute(
           name: 'MenuPrincipal',
           path: '/menuPrincipal',
-          builder: (context, params) => const MenuPrincipalWidget(),
+          builder: (context, params) => MenuPrincipalWidget(),
         ),
         FFRoute(
           name: 'Carrito',
           path: '/carrito',
-          builder: (context, params) => const CarritoWidget(),
+          builder: (context, params) => CarritoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -359,7 +366,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {
