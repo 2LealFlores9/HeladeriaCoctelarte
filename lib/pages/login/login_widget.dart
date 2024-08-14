@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
+import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -32,9 +34,6 @@ class _LoginWidgetState extends State<LoginWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => LoginModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {});
 
     _model.tabBarController = TabController(
       vsync: this,
@@ -137,9 +136,7 @@ class _LoginWidgetState extends State<LoginWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF0E9D7),
@@ -751,9 +748,23 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   16.0),
                                                       child: FFButtonWidget(
                                                         onPressed: () async {
-                                                          context.goNamedAuth(
-                                                              'null',
-                                                              context.mounted);
+                                                          await actions
+                                                              .createUser(
+                                                            _model
+                                                                .txtCorreoTextController
+                                                                .text,
+                                                            _model
+                                                                .txtPassTextController
+                                                                .text,
+                                                            random_data
+                                                                .randomString(
+                                                              10,
+                                                              25,
+                                                              true,
+                                                              false,
+                                                              false,
+                                                            ),
+                                                          );
                                                         },
                                                         text: 'Crear Cuenta',
                                                         options:
@@ -811,6 +822,12 @@ class _LoginWidgetState extends State<LoginWidget>
                                                   Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceEvenly,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
                                                     children: [
                                                       Align(
                                                         alignment:
@@ -850,6 +867,98 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       Align(
                                                         alignment:
                                                             AlignmentDirectional(
+                                                                0.0, -1.0),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      5.0),
+                                                          child: FFButtonWidget(
+                                                            onPressed:
+                                                                () async {
+                                                              GoRouter.of(
+                                                                      context)
+                                                                  .prepareAuthEvent();
+                                                              final user =
+                                                                  await authManager
+                                                                      .signInWithGoogle(
+                                                                          context);
+                                                              if (user ==
+                                                                  null) {
+                                                                return;
+                                                              }
+
+                                                              context.goNamedAuth(
+                                                                  'MenuPrincipal',
+                                                                  context
+                                                                      .mounted);
+                                                            },
+                                                            text:
+                                                                'Continuar con Google',
+                                                            icon: FaIcon(
+                                                              FontAwesomeIcons
+                                                                  .google,
+                                                              size: 20.0,
+                                                            ),
+                                                            options:
+                                                                FFButtonOptions(
+                                                              width: 230.0,
+                                                              height: 30.0,
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              iconPadding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              color:
+                                                                  Colors.white,
+                                                              textStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Plus Jakarta Sans',
+                                                                        color: Color(
+                                                                            0xFF101213),
+                                                                        fontSize:
+                                                                            14.0,
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight:
+                                                                            FontWeight.bold,
+                                                                      ),
+                                                              elevation: 0.0,
+                                                              borderSide:
+                                                                  BorderSide(
+                                                                color: Color(
+                                                                    0xFFE0E3E7),
+                                                                width: 2.0,
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          40.0),
+                                                              hoverColor: Color(
+                                                                  0xFFF1F4F8),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
@@ -858,7 +967,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                       0.0,
                                                                       0.0,
                                                                       0.0,
-                                                                      16.0),
+                                                                      67.0),
                                                           child: Wrap(
                                                             spacing: 16.0,
                                                             runSpacing: 0.0,
@@ -879,81 +988,6 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             clipBehavior:
                                                                 Clip.none,
                                                             children: [
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            16.0),
-                                                                child:
-                                                                    FFButtonWidget(
-                                                                  onPressed:
-                                                                      () async {
-                                                                    context.pushNamed(
-                                                                        'MenuPrincipal');
-                                                                  },
-                                                                  text:
-                                                                      'Continuar con Google',
-                                                                  icon: FaIcon(
-                                                                    FontAwesomeIcons
-                                                                        .google,
-                                                                    size: 20.0,
-                                                                  ),
-                                                                  options:
-                                                                      FFButtonOptions(
-                                                                    width:
-                                                                        230.0,
-                                                                    height:
-                                                                        44.0,
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    color: Colors
-                                                                        .white,
-                                                                    textStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF101213),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          letterSpacing:
-                                                                              0.0,
-                                                                          fontWeight:
-                                                                              FontWeight.bold,
-                                                                        ),
-                                                                    elevation:
-                                                                        0.0,
-                                                                    borderSide:
-                                                                        BorderSide(
-                                                                      color: Color(
-                                                                          0xFFE0E3E7),
-                                                                      width:
-                                                                          2.0,
-                                                                    ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            40.0),
-                                                                    hoverColor:
-                                                                        Color(
-                                                                            0xFFF1F4F8),
-                                                                  ),
-                                                                ),
-                                                              ),
                                                               Padding(
                                                                 padding:
                                                                     EdgeInsetsDirectional
@@ -1393,8 +1427,27 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   16.0),
                                                       child: FFButtonWidget(
                                                         onPressed: () async {
-                                                          context.pushNamed(
-                                                              'MenuPrincipal');
+                                                          GoRouter.of(context)
+                                                              .prepareAuthEvent();
+
+                                                          final user =
+                                                              await authManager
+                                                                  .signInWithEmail(
+                                                            context,
+                                                            _model
+                                                                .txtCorreoITextController
+                                                                .text,
+                                                            _model
+                                                                .txtPassITextController
+                                                                .text,
+                                                          );
+                                                          if (user == null) {
+                                                            return;
+                                                          }
+
+                                                          context.goNamedAuth(
+                                                              'MenuPrincipal',
+                                                              context.mounted);
                                                         },
                                                         text: 'Iniciar Sesión',
                                                         options:
@@ -1528,7 +1581,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'null',
+                                                                  'MenuPrincipal',
                                                                   context
                                                                       .mounted);
                                                             },
@@ -1617,7 +1670,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                     }
 
                                                                     context.goNamedAuth(
-                                                                        'null',
+                                                                        'MenuPrincipal',
                                                                         context
                                                                             .mounted);
                                                                   },
@@ -1709,7 +1762,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           }
 
                                                           context.goNamedAuth(
-                                                              'null',
+                                                              'MenuPrincipal',
                                                               context.mounted);
                                                         },
                                                         text:

@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
+import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'login_widget.dart' show LoginWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -15,7 +17,6 @@ import 'package:provider/provider.dart';
 class LoginModel extends FlutterFlowModel<LoginWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for TabBar widget.
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
@@ -54,7 +55,6 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     tabBarController?.dispose();
     txtCorreoFocusNode?.dispose();
     txtCorreoTextController?.dispose();

@@ -13,7 +13,6 @@ class BuscarHeladosporCategoriaModel
     extends FlutterFlowModel<BuscarHeladosporCategoriaWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for searchBar widget.
   FocusNode? searchBarFocusNode;
   TextEditingController? searchBarTextController;
@@ -28,7 +27,6 @@ class BuscarHeladosporCategoriaModel
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     searchBarFocusNode?.dispose();
     searchBarTextController?.dispose();
 

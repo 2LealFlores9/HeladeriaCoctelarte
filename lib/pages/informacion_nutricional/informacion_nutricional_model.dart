@@ -14,7 +14,6 @@ class InformacionNutricionalModel
     extends FlutterFlowModel<InformacionNutricionalWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for CheckboxGroup widget.
   FormFieldController<List<String>>? checkboxGroupValueController1;
   List<String>? get checkboxGroupValues1 =>
@@ -36,7 +35,5 @@ class InformacionNutricionalModel
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  void dispose() {}
 }

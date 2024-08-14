@@ -1,7 +1,9 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/actions/actions.dart' as action_blocks;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,9 +39,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFF57636C),
@@ -87,13 +87,18 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                           ),
                           child: Padding(
                             padding: EdgeInsets.all(2.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(50.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                width: 100.0,
-                                height: 100.0,
-                                fit: BoxFit.cover,
+                            child: AuthUserStreamWidget(
+                              builder: (context) => ClipRRect(
+                                borderRadius: BorderRadius.circular(50.0),
+                                child: Image.network(
+                                  valueOrDefault<String>(
+                                    currentUserPhoto,
+                                    'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
+                                  ),
+                                  width: 100.0,
+                                  height: 100.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -126,11 +131,8 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.asset(
-                                  Theme.of(context).brightness ==
-                                          Brightness.dark
-                                      ? 'assets/images/@4xff_badgeDesign_dark_small.png'
-                                      : 'assets/images/@4xff_badgeDesign_light_small.png',
+                                child: Image.network(
+                                  '',
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -144,16 +146,18 @@ class _PerfilWidgetState extends State<PerfilWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 12.0),
-                child: Text(
-                  'David Jerome',
-                  textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).headlineSmall.override(
-                        fontFamily: 'Plus Jakarta Sans',
-                        color: Colors.white,
-                        fontSize: 22.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                child: AuthUserStreamWidget(
+                  builder: (context) => Text(
+                    currentUserDisplayName,
+                    textAlign: TextAlign.center,
+                    style: FlutterFlowTheme.of(context).headlineSmall.override(
+                          fontFamily: 'Plus Jakarta Sans',
+                          color: Colors.white,
+                          fontSize: 22.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
                 ),
               ),
               Expanded(
@@ -210,52 +214,80 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 8.0, 16.0, 8.0),
-                                      child: Icon(
-                                        Icons.work_outline,
-                                        color: Color(0xFF57636C),
-                                        size: 24.0,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Padding(
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    await action_blocks.formPhone(context);
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 12.0, 0.0),
-                                        child: Text(
-                                          'Número de teléfono',
-                                          textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF101213),
-                                                fontSize: 14.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
+                                            0.0, 8.0, 16.0, 8.0),
+                                        child: Icon(
+                                          Icons.work_outline,
+                                          color: Color(0xFF57636C),
+                                          size: 24.0,
                                         ),
                                       ),
-                                    ),
-                                    Text(
-                                      'Add Number',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF4B39EF),
-                                            fontSize: 14.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w500,
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 12.0, 0.0),
+                                          child: Text(
+                                            'Número de teléfono',
+                                            textAlign: TextAlign.start,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  color: Color(0xFF101213),
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                           ),
-                                    ),
-                                  ],
+                                        ),
+                                      ),
+                                      AuthUserStreamWidget(
+                                        builder: (context) => InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            await action_blocks
+                                                .formPhone(context);
+                                            setState(() {});
+                                          },
+                                          child: Text(
+                                            valueOrDefault<String>(
+                                              currentPhoneNumber,
+                                              'Agregar',
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  color: Color(0xFF4B39EF),
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -294,7 +326,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'D....gmail.com',
+                                      currentUserEmail,
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -318,8 +350,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed(
-                                        'InformacionNutricionalCopy');
+                                    context.pushNamed('Direccion');
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,

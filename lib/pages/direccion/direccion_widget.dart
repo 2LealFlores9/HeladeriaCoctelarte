@@ -5,27 +5,25 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'informacion_nutricional_copy_model.dart';
-export 'informacion_nutricional_copy_model.dart';
+import 'direccion_model.dart';
+export 'direccion_model.dart';
 
-class InformacionNutricionalCopyWidget extends StatefulWidget {
-  const InformacionNutricionalCopyWidget({super.key});
+class DireccionWidget extends StatefulWidget {
+  const DireccionWidget({super.key});
 
   @override
-  State<InformacionNutricionalCopyWidget> createState() =>
-      _InformacionNutricionalCopyWidgetState();
+  State<DireccionWidget> createState() => _DireccionWidgetState();
 }
 
-class _InformacionNutricionalCopyWidgetState
-    extends State<InformacionNutricionalCopyWidget> {
-  late InformacionNutricionalCopyModel _model;
+class _DireccionWidgetState extends State<DireccionWidget> {
+  late DireccionModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => InformacionNutricionalCopyModel());
+    _model = createModel(context, () => DireccionModel());
   }
 
   @override
@@ -38,9 +36,7 @@ class _InformacionNutricionalCopyWidgetState
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,

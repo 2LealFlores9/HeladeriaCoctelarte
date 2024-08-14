@@ -39,9 +39,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F4F8),
@@ -646,47 +644,38 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                 ),
               ),
             ),
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              onTap: () async {
-                context.pushNamed('null');
-              },
-              child: Container(
-                width: double.infinity,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).success,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 4.0,
-                      color: Color(0x320E151B),
-                      offset: Offset(
-                        0.0,
-                        -2.0,
-                      ),
-                    )
-                  ],
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(0.0),
-                    bottomRight: Radius.circular(0.0),
-                    topLeft: Radius.circular(16.0),
-                    topRight: Radius.circular(16.0),
-                  ),
+            Container(
+              width: double.infinity,
+              height: 100.0,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).success,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 4.0,
+                    color: Color(0x320E151B),
+                    offset: Offset(
+                      0.0,
+                      -2.0,
+                    ),
+                  )
+                ],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(0.0),
+                  bottomRight: Radius.circular(0.0),
+                  topLeft: Radius.circular(16.0),
+                  topRight: Radius.circular(16.0),
                 ),
-                alignment: AlignmentDirectional(0.0, -0.35),
-                child: Text(
-                  'Finalizar Compra (\$3000)',
-                  style: FlutterFlowTheme.of(context).headlineMedium.override(
-                        fontFamily: 'Outfit',
-                        color: Colors.white,
-                        fontSize: 24.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.normal,
-                      ),
-                ),
+              ),
+              alignment: AlignmentDirectional(0.0, -0.35),
+              child: Text(
+                'Finalizar Compra (\$3000)',
+                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                      fontFamily: 'Outfit',
+                      color: Colors.white,
+                      fontSize: 24.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.normal,
+                    ),
               ),
             ),
           ],

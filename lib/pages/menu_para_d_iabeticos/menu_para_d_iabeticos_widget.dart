@@ -38,9 +38,7 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F5F8),
@@ -190,10 +188,20 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
-                                      child: Icon(
-                                        Icons.chevron_right_rounded,
-                                        color: Color(0xFF57636C),
-                                        size: 24.0,
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed(
+                                              'InformacionNutricional');
+                                        },
+                                        child: Icon(
+                                          Icons.chevron_right_rounded,
+                                          color: Color(0xFF57636C),
+                                          size: 24.0,
+                                        ),
                                       ),
                                     ),
                                     Padding(
@@ -293,10 +301,20 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
-                                    child: Icon(
-                                      Icons.chevron_right_rounded,
-                                      color: Color(0xFF57636C),
-                                      size: 24.0,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                            'InformacionNutricional');
+                                      },
+                                      child: Icon(
+                                        Icons.chevron_right_rounded,
+                                        color: Color(0xFF57636C),
+                                        size: 24.0,
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -395,10 +413,20 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
-                                    child: Icon(
-                                      Icons.chevron_right_rounded,
-                                      color: Color(0xFF57636C),
-                                      size: 24.0,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                            'InformacionNutricional');
+                                      },
+                                      child: Icon(
+                                        Icons.chevron_right_rounded,
+                                        color: Color(0xFF57636C),
+                                        size: 24.0,
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -497,10 +525,20 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
-                                    child: Icon(
-                                      Icons.chevron_right_rounded,
-                                      color: Color(0xFF57636C),
-                                      size: 24.0,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                            'InformacionNutricional');
+                                      },
+                                      child: Icon(
+                                        Icons.chevron_right_rounded,
+                                        color: Color(0xFF57636C),
+                                        size: 24.0,
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -599,10 +637,20 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
-                                    child: Icon(
-                                      Icons.chevron_right_rounded,
-                                      color: Color(0xFF57636C),
-                                      size: 24.0,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                            'InformacionNutricional');
+                                      },
+                                      child: Icon(
+                                        Icons.chevron_right_rounded,
+                                        color: Color(0xFF57636C),
+                                        size: 24.0,
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -701,10 +749,20 @@ class _MenuParaDIabeticosWidgetState extends State<MenuParaDIabeticosWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
-                                    child: Icon(
-                                      Icons.chevron_right_rounded,
-                                      color: Color(0xFF57636C),
-                                      size: 24.0,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                            'InformacionNutricional');
+                                      },
+                                      child: Icon(
+                                        Icons.chevron_right_rounded,
+                                        color: Color(0xFF57636C),
+                                        size: 24.0,
+                                      ),
                                     ),
                                   ),
                                   Padding(

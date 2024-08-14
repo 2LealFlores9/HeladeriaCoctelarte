@@ -10,15 +10,9 @@ import 'package:provider/provider.dart';
 
 class MenuParaDIabeticosModel
     extends FlutterFlowModel<MenuParaDIabeticosWidget> {
-  ///  State fields for stateful widgets in this page.
-
-  final unfocusNode = FocusNode();
-
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  void dispose() {}
 }

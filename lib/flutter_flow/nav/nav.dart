@@ -78,12 +78,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn ? () : (),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? MenuPrincipalWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn ? () : (),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? MenuPrincipalWidget() : LoginWidget(),
         ),
         FFRoute(
           name: 'Login',
@@ -111,9 +113,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => BuscarHeladosporCategoriaWidget(),
         ),
         FFRoute(
-          name: 'InformacionNutricionalCopy',
-          path: '/informacionNutricionalCopy',
-          builder: (context, params) => InformacionNutricionalCopyWidget(),
+          name: 'Direccion',
+          path: '/direccion',
+          builder: (context, params) => DireccionWidget(),
         ),
         FFRoute(
           name: 'Perfil',
@@ -129,6 +131,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Carrito',
           path: '/carrito',
           builder: (context, params) => CarritoWidget(),
+        ),
+        FFRoute(
+          name: 'EditarPerfil',
+          path: '/editarPerfil',
+          builder: (context, params) => EditarPerfilWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -299,7 +306,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/';
+            return '/login';
           }
           return null;
         },
